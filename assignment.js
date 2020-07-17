@@ -43,3 +43,28 @@ var friendsName = tinyFriends(friends)
 console.log(friendsName);
 
 // 4th problem complit
+
+function brickCalculator(roof){
+    var getFloor = roof;
+var feet = 1000;
+if(getFloor<=10){
+
+ var floor1 = feet*15;
+ console.log(floor1) ;
+
+}else if(getFloor<=11 && getFloor<=20){
+var floor2 = (feet*12)+floor1;
+return floor2 ;
+
+}else{
+
+var floor3 = (feet*10)+floor1+floor2;
+
+return floor3;
+
+}
+
+
+}
+
+
