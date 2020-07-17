@@ -42,29 +42,43 @@ return maxName;
 var friendsName = tinyFriends(friends)
 console.log(friendsName);
 
-// 4th problem complit
+// 4th problem complit brickCalculator(roof)
+
+//before problem was wrong
+
+// and wright solution
 
 function brickCalculator(roof){
-    var getFloor = roof;
 var feet = 1000;
-if(getFloor<=10){
+var needSton = 0;
 
- var floor1 = feet*15;
- console.log(floor1) ;
+if(roof<=10){
 
-}else if(getFloor<=11 && getFloor<=20){
-var floor2 = (feet*12)+floor1;
-return floor2 ;
+    needSton = feet*15;
+}
 
-}else{
+else if (roof<=20){
 
-var floor3 = (feet*10)+floor1+floor2;
+    var firstFloor = feet*15;
+    var remaining = roof - 10;
+    var secenFloor = remaining * 12;
+    needSton = firstFloor+secenFloor;
 
-return floor3;
+}
+else{
 
+    var firstFloor = feet*15;
+    var secenFloor= feet*12;
+    var remaining = roof - 20;
+    var thirdFloor = remaining * 10;
+    needSton = firstFloor + secenFloor + thirdFloor;
+
+
+}
+return needSton;
 }
 
 
-}
+
 
 
